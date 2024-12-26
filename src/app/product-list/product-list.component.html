@@ -1,0 +1,17 @@
+<div>
+  <h3>{{ title }}</h3>
+  <div>
+    <input type="text" placeholder="Enter Your wishlist!" #AddList />
+    <button (click)="wishlistadd(AddList.value)">Add Here!</button>
+  </div>
+  <ul *ngFor="let mytodo of listofTodo; let i = index">
+    <li style="list-style-type:none;">{{ i + 1 }} {{ mytodo.todoname }}</li>
+    <button (click)="removefromtheList(mytodo.id)">Remove</button>
+  </ul>
+</div>
+
+<!-- 
+Copyright Google LLC. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at http://angular.io/license
+-->
